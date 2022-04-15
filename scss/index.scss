@@ -1,0 +1,161 @@
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.loader-container{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+background-image: radial-gradient(circle at center center, rgb(213,64,39),rgb(29, 16, 5));
+
+}
+
+.bloc_anim {
+    position : fixed;
+    border:1px solid #aaa;
+    border-radius : 8px;
+    box-shadow : 0 5px 15px;
+}
+#navBarFixed{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.nav-item {
+    a  {
+        color : #333!important;
+        transition : transform 0.2s ease-in-out;
+        &::first-letter{
+            color : #c60;
+        }
+        &:hover {
+            transform:scale(1.3);
+        }
+        &:hover::first-letter{
+            color: rgb(240, 131, 23);
+
+        }
+    }
+}
+
+.bloc-anim{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    height: 25rem;
+    z-index: 100;
+}
+/* contenu de limage qui part du bas et est animé en JS vers le haut */
+.contain-image{
+    position: absolute;
+    /* border: solid black; */
+    width: 100%;
+    height: 0%;
+    bottom: 0px;
+    z-index: 150;
+    overflow: hidden;
+}
+.img-flip{
+    /* border: solid saddlebrown; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.flip-img1{
+    background: url( ../ressources/manInBlackRed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+}
+.flip {
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    position: absolute;
+}
+.background-transition {
+    background:  rgb(19, 19, 19);
+}
+.bloc-txt{
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    height: 0;
+    z-index: 175;
+    background: whitesmoke;
+    overflow: hidden;
+}
+.bloc-txt h2 {
+    padding: 1rem 2rem;
+    color: #222;
+    font-family: Playfair Display, serif;
+    font-size: 40px;
+    transform: translateY(100px);
+}
+
+/* Animation résponsive */
+@media screen and (max-width : 768px){
+    .bloc-anim{
+        width: 15rem;
+    }
+    .bloc-txt{
+        bottom: -35px;
+    }
+    .bloc-txt h2{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width : 500px) and (max-width : 768px){
+    .bloc-anim{
+        width: 20rem;
+    }
+    .bloc-txt{
+        bottom: -35px;
+    }
+    .bloc-txt h2{
+        font-size: 25px;
+    }
+}
+
+body{
+    font-family: fantasy;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1550px;
+    // min-width: 320px;
+}
+#accueil{
+    margin: 0 auto;
+    background-image: radial-gradient(circle at center center, rgb(213,64,39),rgb(29, 16, 5));
+
+}
+.imgProfileAcc {
+    margin: 2rem auto;
+    width: 150px;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+}
+#about{
+    background-image: radial-gradient(circle at center center, rgb(213,64,39),rgb(29, 16, 5));
+
+}
+#services{
+    &.image_services img{
+       border: solid red;
+    }
+}
+.section-contacte{
+    background-image: radial-gradient(circle at center center, rgb(213,64,39),rgb(29, 16, 5));
+
+}
