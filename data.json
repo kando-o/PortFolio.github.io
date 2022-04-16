@@ -4,6 +4,7 @@
         "name" : "ohMyFood",
         "title" : "Projet Oh My Food",
         "image" : "ohMyFood.PNG",
+        "alt" : "petite image du Site",
         "codeSource" : "https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git",
         "description" : "Site vitrine realisé entièrement en HTML, SCSS 'SAAS'. Site de réservation de restaurant.",
         "viewProjet" : "https://kando-o.github.io/JasonKando_3_0802_2021.github.io/"        
