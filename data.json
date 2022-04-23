@@ -9,7 +9,7 @@
             "alt" : "petite image du Site",
             "codeSource" : "https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git",
             "description" : "Site vitrine realisé entièrement en HTML, SCSS 'SAAS'. Site de réservation de restaurant.",
-            "viewProjet" : " https://kando-o.github.io/Projet-OhMyFood.github.io/"        
+            "viewProjet" : "https://kando-o.github.io/Projet-OhMyFood.github.io/"        
         }
         ,
         {
@@ -17,7 +17,7 @@
             "name" : "fishEye",
             "title" : "Projet FishEye",
             "image" : "fisheye.PNG",
-            "codeSource" : "https://github.com/kando-o/Jason-KANDO_P6.github.io-.git",
+            "codeSource" : "https://github.com/kando-o/Projet-FishEye.github.io",
             "description" : "Site vitrine réalisé en HTML,CSS,JS. Site de booking pour des photographes.",
             "viewProjet" : "https://kando-o.github.io/Projet-FishEye.github.io/"        
         }
@@ -29,7 +29,7 @@
             "image" : "ManWhitHat.jpg",
             "codeSource" : "https://github.com/kando-o/PortFolio.github.io",
             "description" : "Site vitrine réaliser en JS,GreenShock ",
-            "viewProjet" : "#"        
+            "viewProjet" : "https://kando-o.github.io/PortFolio.github.io/"        
         }
         ,
         {
@@ -44,11 +44,31 @@
     ],
 
     "stacks":[
-        {"Name":"Bootstrap",
+
+        {"Name":"VS.Code",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"vs.code"
+        }
+        ,
+        {"Name":"SAAS",
         "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-        "image":"bootstrap"
-        },
-        {},
-        {}
+        "image":"saas"
+        }
+        ,
+        {"Name":"Bootstrap",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"bootstrap"
+        }
+        ,
+        {"Name":"JS",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"javascript"
+        }
+        ,
+        {"Name":"NPM",
+        "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+        "image":"npm"
+        }
+        
     ]
 }

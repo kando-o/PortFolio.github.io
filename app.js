@@ -58,7 +58,6 @@ const loadCards = ()=>{
     .then(res=>res.json())
     .then(data=>{
         document.getElementById("cards").innerHTML = data.projets.map(card => loadCard(card)).join``
-        document.getElementById("cards").innerHTML += '<p id="bt-empty">Click</p>';
         const bt = document.getElementById("bt-empty");
         bt.onclick = ()=> {
             document.querySelector(".smartphone__frame").innerHTML = "<h1>Oh My f...God !</h1>";
@@ -72,7 +71,7 @@ const loadCards = ()=>{
 const loadCard = (card)=>{
     
     if(!card.id)return'';
-
+    console.log(card.viewProjet);
     return `<div class="col-lg-4 col-md-6 col-12 card-wrapper">
                 <div class="card mb-4 shadow-sm" id="${card.name}">
                         <img src="./ressources/${card.image}" alt="${card.alt}" class="card-img-top " style="height: 10.5rem" >
