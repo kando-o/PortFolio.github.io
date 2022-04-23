@@ -72,7 +72,7 @@
         <div class="textAccueil mt-auto">
             <img src="./ressources/logoGtlm.png" class="imgProfileAcc py-4" alt="profile pic" >
             <h1>Salut, moi c'est Kyssii</h1>
-            <p class="lead">Je suis développeur Front-End junior, et je me spécialise dans les différents frameworks JavaScript</p>
+            <p class="lead">Je suis développeur Front-End junior, et je me spécialise dans les différents frameworks JavaScript et la POO</p>
             <p class="lead">
                 <a href="#about" class="btn btn-lg btn-secondary" > En savoir plus</a>
             </p>
@@ -94,120 +94,12 @@
         
         <div class="container d-flex flex-column align-items-center">
 
-            
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" id="cards"></div>
 
-                <div class=" col-lg-4 col-md-6 col-12">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="./ressources/ohMyFood2.PNG" alt="image card" class="card-img-top " style="height: 10.5rem" >
-                        <div class="card-body">
-                            <h4>Vitrine d'Artistes</h4>
-                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea dolores eos debitis incidunt accusantium?</p>
-                        </div>
-
-                        <div class="d-flex justify-content-between m-3">
-                            <div class="btn-group ">
-                                <a href="https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git" target="_blanc" class="text-dark">
-                                    <button class="btn btn-sm btn-outline btn-secondary">
-                                        Code source
-                                    </button>
-                                </a>
-                                <a href="https://kando-o.github.io/JasonKando_3_0802_2021.github.io/" target="_blanc" class="text-dark">
-                                    <button class="btn btn-sm btn-outline btn-secondary ml-2">
-                                        View Projet
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" col-lg-4 col-md-6 col-12">
-                    <div class="card mb-4  shadow-sm">
-                        <img src="./ressources/fisheye.PNG" alt="image card" class="card-img-top " style="height: 10.5rem" >
-                        <div class="card-body">
-                            <h4>Vitrine d'Artistes</h4>
-                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea dolores eos debitis incidunt accusantium?</p>
-                        </div>
-                        <div class="d-flex justify-content-between m-3">
-
-                        <div class="btn-group ">
-                            <a href="https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary">
-                                    Code source
-                                </button>
-                            </a>
-                            <a href="https://kando-o.github.io/JasonKando_3_0802_2021.github.io/" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary ml-2">
-                                    View Projet
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="./ressources/ManWhitHat.jpg" alt="image card" class="card-img-top " style="height: 10.5rem" >
-                        <div class="card-body">
-                            <h4>Vitrine d'Artistes</h4>
-                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea dolores eos debitis incidunt accusantium?</p>
-                        </div>
-                        <div class="d-flex justify-content-between m-3">
-
-                        <div class="btn-group ">
-                            <a href="https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary">
-                                    Code source
-                                </button>
-                            </a>
-                            <a href="https://kando-o.github.io/JasonKando_3_0802_2021.github.io/" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary ml-2">
-                                    View Projet
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="./ressources/animation.jpg" alt="image card" class="card-img-top " style="height: 10.5rem" >
-                        <div class="card-body">
-                            <h4>Vitrine d'Artistes</h4>
-                            <p class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea dolores eos debitis incidunt accusantium?</p>
-                        </div>
-                        <div class="d-flex justify-content-between m-3">
-
-                        <div class="btn-group ">
-                            <a href="https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary">
-                                    Code source
-                                </button>
-                            </a>
-                            <a href="https://kando-o.github.io/JasonKando_3_0802_2021.github.io/" target="_blanc" class="text-dark">
-                                <button class="btn btn-sm btn-outline btn-secondary ml-2">
-                                    View Projet
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-            
-            </div>
-
-            </div>
         </div>
+    </div>
 
-        <!-- À Propos  -->
+    <!-- À Propos  -->
         
 
     <section class="bg-dark" id="about">
@@ -241,9 +133,14 @@
     <!-- Mes Services -->
     <section id="services" class='py-4'>
         
-        <h2 class="text-uppercase my-4 text-center"> Mes Services</h2>
+        <h2 class="text-uppercase my-4 text-center">Ma Stack</h2>
             <div class="container ">
-
+<!--
+    VS Code
+    NPM - NodeJS
+    SASS
+    -> VUE JS !!!
+-->
                 <div class="row d-flex  justify-content-center align-items-center">
                     <div class=" col-lg-3 col-md-6  d-flex flex-column align-items-center justify-content-center text-center shadow-sm m-4">
                             <img src="./ressources/React.png" alt="" width="140" height="130">
@@ -278,7 +175,7 @@
     </section>
 
     <!-- Formilaire de contacte -->
-    <section id="contacte" class="bg-dark section-contacte">
+    <section id="contact-form" class="bg-dark section-contact">
         <div class="container text-white d-flex flex-column">
          <h2 class="titreContacte text-center">Rentrons en contact</h2> 
             <!-- Section Formulaire -->
@@ -311,6 +208,14 @@
             </div>
         </div>
     </section>
+
+    <section class="smartphone__wrapper smart__hide">
+        <div class="smartphone ">
+            <div class="smartphone__frame"><button class="smartphone__close shadow-sm">X</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-dark text-white">
         <p class="text-center">

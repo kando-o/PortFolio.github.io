@@ -1,9 +1,10 @@
-let card = document.querySelectorAll('.card');
-
 /**
  * @description | Animation du loader
  */
 function loader() {
+
+    loadCards();
+    let card = document.querySelectorAll('.card');
 
     const TLLOAD = gsap.timeline();
 
@@ -33,25 +34,92 @@ function loader() {
         .add(() => {
             document.querySelector('.load-container').style.display = "none";
         });
+
+    gsap.registerEffect({
+        name : "bounce",
+        effect : (targets, config , y, x) => {
+            return gsap.to(targets, {duration : config.duration, x : config.x, y : config.y, scale : config.scale, rotation : config.rotation, ease : config.ease, opacity : config.opacity})
+        },
+        defaults: {duration: 2}
+    })
+
+    // Animation card partie PortFolio
+    gsap.to(card[0], { x: -25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+    gsap.to(card[1], { x: 25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+    gsap.to(card[2], { x: -25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+    gsap.to(card[3], { x: 25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
 }
 
-gsap.registerEffect({
-    name : "bounce",
-    effect : (targets, config , y, x) => {
-        return gsap.to(targets, {duration : config.duration, x : config.x, y : config.y, scale : config.scale, rotation : config.rotation, ease : config.ease, opacity : config.opacity})
-    },
-    defaults: {duration: 2}
-})
 
-// Animation card partie PortFolio
-gsap.to(card[0], { y: -25, delay : 8, duration: 2, ease : 'bounce'} )
-gsap.to(card[1], { y: 25, delay : 8, duration: 2, ease : 'bounce'} )
-gsap.to(card[2], { y: -25, delay : 9.5, duration: 2, ease : 'bounce'} )
-gsap.to(card[3], { y: 25, delay : 9.5, duration: 2, ease : 'bounce'} )
+// Display Card
 
-// gsap.to(card[0], { y: 25, delay : 8, duration: 2, ease : 'bounce'} )
-// gsap.to(card[1], { y: 25, delay : 8, duration: 2, ease : 'bounce'} )
-// gsap.to(card[2], { y: 25, delay : 9, duration: 2, ease : 'bounce'} )
-// gsap.to(card[3], { y: 25, delay : 9, duration: 2, ease : 'bounce'} )
+const loadCards = ()=>{
+    fetch("data.json")
+    .then(res=>res.json())
+    .then(data=>{
+        document.getElementById("cards").innerHTML = data.projets.map(card => loadCard(card)).join``
+        document.getElementById("cards").innerHTML += '<p id="bt-empty">Click</p>';
+        const bt = document.getElementById("bt-empty");
+        bt.onclick = ()=> {
+            document.querySelector(".smartphone__frame").innerHTML = "<h1>Oh My f...God !</h1>";
+            document.querySelector(".smartphone__wrapper").classList.toggle("smart__hide");
+        };
+        displayPhone(data.projets);
+
+    })
+}
+
+const loadCard = (card)=>{
+    
+    if(!card.id)return'';
+
+    return `<div class="col-lg-4 col-md-6 col-12 card-wrapper">
+                <div class="card mb-4 shadow-sm" id="${card.name}">
+                        <img src="./ressources/${card.image}" alt="${card.alt}" class="card-img-top " style="height: 10.5rem" >
+                        <div class="card-body">
+                            <h4>${card.title}</h4>
+                            <p class="card-text">${card.description}?</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between m-3">
+                            <div class="btn-group ">
+                                <a href="${card.codeSource}" target="_blanc" class="text-dark">
+                                    <button class="btn btn-sm btn-outline btn-secondary">
+                                        Code source
+                                    </button>
+                                </a>
+                                <a href="${card.viewProject}" target="_blanc" class="text-dark">
+                                    <button class="btn btn-sm btn-outline btn-secondary ml-2">
+                                        View Projet
+                                    </button>
+                                </a>
+                                <button class="btn btn-sm btn-outline btn-secondary ml-2 projet_phone">
+                                    View Projet phone
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+   
+};
+function displayPhone(card){
+
+    const htmlPhone = document.querySelectorAll('.projet_phone');
+    htmlPhone.forEach((item) => {
+        console.log();
+        item.onclick = () => {
+            console.log('clicke vieuw');
+            document.querySelector(".smartphone__wrapper").classList.remove('smart__hide')
+            document.querySelector(".smartphone__wrapper").classList.add('smart__vieuw')
+
+        }
+    })
+    let btnCloseSmartPhone = document.querySelector('.smartphone__close')
+   btnCloseSmartPhone.onclick = () => {
+       document.querySelector('.smartphone__wrapper').classList.add("smart__hide")
+} 
+       
+};
+
 
 window.onload = loader;

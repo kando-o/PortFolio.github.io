@@ -1,42 +1,54 @@
-[
-    {
-        "id":"1",
-        "name" : "ohMyFood",
-        "title" : "Projet Oh My Food",
-        "image" : "ohMyFood.PNG",
-        "alt" : "petite image du Site",
-        "codeSource" : "https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git",
-        "description" : "Site vitrine realisé entièrement en HTML, SCSS 'SAAS'. Site de réservation de restaurant.",
-        "viewProjet" : "https://kando-o.github.io/JasonKando_3_0802_2021.github.io/"        
-    }
-    ,
-    {
-        "id":"2",
-        "name" : "fishEye",
-        "title" : "Projet FishEye",
-        "image" : "fisheye.PNG",
-        "codeSource" : "https://github.com/kando-o/Jason-KANDO_P6.github.io-.git",
-        "description" : "Site vitrine réalisé en HTML,CSS,JS. Site de booking pour des photographes.",
-        "viewProjet" : "https://kando-o.github.io/Jason-KANDO_P6.github.io-/"        
-    }
-    ,
-    {
-        "id":"3",
-        "name" : "GTLM-Production",
-        "title" : "Gtlm & Co",
-        "image" : "ohMyFood.PNG",
-        "codeSource" : " ",
-        "description" : "Site vitrine réaliser en JS,GreenShock ",
-        "viewProjet" : " "        
-    }
-    ,
-    {
-        "id":" ",
-        "name" : " ",
-        "title" : " ",
-        "image" : " ",
-        "codeSource" : " ",
-        "description" : " ",
-        "viewProjet" : " "        
-    }
-]
+{
+    "projets": [
+        {},
+        {
+            "id":"1",
+            "name" : "ohMyFood",
+            "title" : "Projet Oh My Food",
+            "image" : "ohMyFood2.PNG",
+            "alt" : "petite image du Site",
+            "codeSource" : "https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git",
+            "description" : "Site vitrine realisé entièrement en HTML, SCSS 'SAAS'. Site de réservation de restaurant.",
+            "viewProjet" : " https://kando-o.github.io/Projet-OhMyFood.github.io/"        
+        }
+        ,
+        {
+            "id":"2",
+            "name" : "fishEye",
+            "title" : "Projet FishEye",
+            "image" : "fisheye.PNG",
+            "codeSource" : "https://github.com/kando-o/Jason-KANDO_P6.github.io-.git",
+            "description" : "Site vitrine réalisé en HTML,CSS,JS. Site de booking pour des photographes.",
+            "viewProjet" : "https://kando-o.github.io/Projet-FishEye.github.io/"        
+        }
+        ,
+        {
+            "id":"3",
+            "name" : "GTLM-Production",
+            "title" : "Gtlm & Co",
+            "image" : "ManWhitHat.jpg",
+            "codeSource" : "https://github.com/kando-o/PortFolio.github.io",
+            "description" : "Site vitrine réaliser en JS,GreenShock ",
+            "viewProjet" : "#"        
+        }
+        ,
+        {
+            "id":"4",
+            "name" : "Animation",
+            "title" : "Site Vitrine",
+            "image" : "animation.jpg",
+            "codeSource" : "#",
+            "description" : "Slim Shady",
+            "viewProjet" : "#"        
+        }
+    ],
+
+    "stacks":[
+        {"Name":"Bootstrap",
+        "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+        "image":"bootstrap"
+        },
+        {},
+        {}
+    ]
+}
