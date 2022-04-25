@@ -51,24 +51,24 @@ function loader() {
 }
 
 
-// Display Card
-
+// Display card PortFlolio
 const loadCards = ()=>{
     fetch("data.json")
     .then(res=>res.json())
     .then(data=>{
         document.getElementById("cards").innerHTML = data.projets.map(card => loadCard(card)).join``
-        const bt = document.getElementById("bt-empty");
-        bt.onclick = ()=> {
-            document.querySelector(".smartphone__frame").innerHTML = "<h1>Oh My f...God !</h1>";
-            document.querySelector(".smartphone__wrapper").classList.toggle("smart__hide");
-        };
-        displayPhone(data.projets);
-
+        render(data)
+        return data
     })
 }
+function render(card) {
+    loadCardsStacks(card.stacks)
+    displaySmartPhone(card.projets);
+    renderCardStacks(card.stacks)
+}
 
-const loadCard = (card)=>{
+
+function loadCard(card) {
     
     if(!card.id)return'';
     console.log(card.viewProjet);
@@ -82,43 +82,123 @@ const loadCard = (card)=>{
 
                         <div class="d-flex justify-content-between m-3">
                             <div class="btn-group ">
+
                                 <a href="${card.codeSource}" target="_blanc" class="text-dark">
                                     <button class="btn btn-sm btn-outline btn-secondary">
                                         Code source
                                     </button>
                                 </a>
+
                                 <a href="${card.viewProject}" target="_blanc" class="text-dark">
                                     <button class="btn btn-sm btn-outline btn-secondary ml-2">
                                         View Projet
                                     </button>
                                 </a>
+
                                 <button class="btn btn-sm btn-outline btn-secondary ml-2 projet_phone">
                                     View Projet phone
                                 </button>
+
                             </div>
                         </div>
                     </div>
                 </div>`;
    
 };
-function displayPhone(card){
+
+function loadCardsStacks(cards) {
+    // console.log(cards);
+    cards.map((card) => {
+        console.log(card);
+        document.getElementById('container__stack').innerHTML += `
+        <div class=" col-lg-3 col-md-6  d-flex flex-column align-items-center justify-content-center text-center shadow-sm m-4">
+                                <img src="./ressources/${card.image}" alt="" width="140" height="130">
+                                <h2 class="text-uppercase text-center">${card.name}</h2>
+                                <p >
+                                    ${card.description}
+                                </p>
+                                <a href="#" class="btn btn-secondary btn-services mb-2">Voir mes projets</a>
+                        </div>
+        `;
+    })
+    // if (!card.name)return'';
+  
+    // containerStack.appendChild('')
+
+
+
+}
+// upload
+// creat
+// init
+//
+// Displaycard Stacks
+// load render
+
+
+function displaySmartPhone(card){
 
     const htmlPhone = document.querySelectorAll('.projet_phone');
+    let btnCloseSmartPhone = document.querySelector('.smartphone__close');
+
     htmlPhone.forEach((item) => {
         console.log();
         item.onclick = () => {
             console.log('clicke vieuw');
             document.querySelector(".smartphone__wrapper").classList.remove('smart__hide')
             document.querySelector(".smartphone__wrapper").classList.add('smart__vieuw')
+        }
+    });
+    btnCloseSmartPhone.onclick = () => {
+       document.querySelector('.smartphone__wrapper').classList.add("smart__hide")
+    } 
+};
+
+function loadCardStack(elem, elParent = null, elClass, obj) {
+   
+    let createEl = document.createElement(elem);
+    if (elClass && elClass.length > 0){elClass.split(" ").map(c => createEl.classList.add(c)) };
+    if (elParent) {
+        elParent.appendChild(createEl)
+        return createEl;
+    } else { 
+        console.log("No parent");
+    }
+};
+
+function parsElDom(obj, parent = null){
+    let createdEl = document.createElement(obj.name)
+
+    if (obj.classes && obj.classes > 0 ) {
+        obj.classes.map((c) => createdEl.classList.add(c));
+    }
+    if (obj.description || obj.name) {
+        createdEl.textContent = obj.description
+        createdEl.textContent = obj.name
+    }
+    if (obj.children) {
+        parsElDom(c, createdEl)
+    }
+    return createdEl
+}
+
+
+function renderCardStacks(arrayStack){
+    // const containerStack = document.getElementById('container__stack');
+
+    // loadCardStack("div", containerStack, "test", arrayStack)
+    let id = -1;
+    arrayStack.map((arraymap) => {
+        id++;
+        arraymap.index = id
+        const objStack = {
 
         }
+        
     })
-    let btnCloseSmartPhone = document.querySelector('.smartphone__close')
-   btnCloseSmartPhone.onclick = () => {
-       document.querySelector('.smartphone__wrapper').classList.add("smart__hide")
-} 
-       
-};
+    parsElDom(arrayStack)
+}
+
 
 
 window.onload = loader;

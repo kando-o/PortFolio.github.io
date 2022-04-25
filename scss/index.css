@@ -290,4 +290,10 @@ body {
 
 .section-contact {
   background-image: radial-gradient(circle at center center, rgb(140, 100, 80), rgb(60, 40, 20));
+}
+
+.test {
+  border: rgb(60, 40, 20) solid;
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=index.css.map */

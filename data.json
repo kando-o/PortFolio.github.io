@@ -45,30 +45,70 @@
 
     "stacks":[
 
-        {"Name":"VS.Code",
+        {
+            "name":"VS Code",
             "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-            "image":"vs.code"
+            "image":"Visual_Studio_Code_1.35_icon.svg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de VS Code"
         }
         ,
-        {"Name":"SAAS",
-        "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-        "image":"saas"
-        }
-        ,
-        {"Name":"Bootstrap",
+        {
+            "name":"SASS",
             "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-            "image":"bootstrap"
+            "image":"Sass_Logo_Color.svg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de SAAS"
         }
         ,
-        {"Name":"JS",
+        {
+            "name":"BootStrap",
             "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-            "image":"javascript"
+            "image":"Bootstrap_logo.svg", 
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de BootStrap"
         }
         ,
-        {"Name":"NPM",
-        "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-        "image":"npm"
+        {
+            "name":"JS",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"js.jpg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de JS"
         }
+        ,
+        {
+            "name":"NPM",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"Npm-logo.svg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de NPM"
+        }
+        ,
+        {
+            "name":"NodeJS",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"Node.js_logo.svg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de NodeJs"
+        }
+        ,
+        {
+            "name":"Vue JS",
+            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "image":"vue.png",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de Vue JS"
+        }
+        ,
+        {
+            "name":"React",
+            "description":"Framwork accopagne le JS facilite grandement la conception de site OnePagepage ",
+            "image":"React-icon.svg",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de Vue JS"
+        }
+        
         
     ]
 }
