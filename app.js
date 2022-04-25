@@ -111,7 +111,7 @@ function loadCardsStacks(cards) {
     cards.map((card) => {
         console.log(card);
         document.getElementById('container__stack').innerHTML += `
-        <div class=" col-lg-3 col-md-6  d-flex flex-column align-items-center justify-content-center text-center shadow-sm m-4">
+        <div class=" col-lg-3 col-md-6  d-flex flex-column align-items-center justify-content-center text-center shadow-sm m-4" style="min-height: 25rem;">
                                 <img src="./ressources/${card.image}" alt="" width="140" height="130">
                                 <h2 class="text-uppercase text-center">${card.name}</h2>
                                 <p >
