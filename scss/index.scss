@@ -251,7 +251,7 @@ body{
     top: 0;
     right: 0;
     left: 50%;
-    transition:  1s ease-in-out;
+    transition:  .4s ease-in-out;
 }
 .card__imagePortfolio::before{
     content: '';
@@ -261,7 +261,7 @@ body{
     top: 0;
     right: 50%;
     left: 0;
-    transition:  1s ease-in-out;
+    transition:  .4s ease-in-out;
 
 }
 .card-wrapper:hover .card__imagePortfolio::after
@@ -324,7 +324,7 @@ body{
     z-index: 1;
     // overflow: hidden;
     background: white;
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
         &.rainbow:hover{
             transform: scale(1.1);
         }
