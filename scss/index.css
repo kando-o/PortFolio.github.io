@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.loader-container {
+.loader__container {
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -13,12 +13,67 @@
   pointer-events: none;
   background: radial-gradient(circle at center center, rgb(140, 100, 80), rgb(60, 40, 20));
 }
+.loader__container .bloc__anim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  height: 25rem;
+  z-index: 100;
+}
+.loader__container .bloc__anim .contain__image {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  z-index: 150;
+  overflow: hidden;
+}
+.loader__container .bloc__anim .contain__image .img-flip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.loader__container .bloc__anim .contain__image .flip-img1 {
+  background: url(../ressources/manInBlackRed.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.loader__container .bloc__anim .contain__image .flip {
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  position: absolute;
+}
+.loader__container .bloc__anim .contain__image .bg__transition {
+  background: rgb(19, 19, 19);
+}
+.loader__container .bloc__anim .bloc__txt {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  height: 0;
+  z-index: 175;
+  background: whitesmoke;
+  overflow: hidden;
+}
+.loader__container .bloc__anim .bloc__txt.bloc__txt h2 {
+  padding: 1rem 2rem;
+  color: #222;
+  font-family: Playfair Display, serif;
+  font-size: 40px;
+  transform: translateY(100px);
+}
 
-.bloc_anim {
-  position: fixed;
-  border: 1px solid #aaa;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px;
+body {
+  font-family: fantasy;
+  min-width: 320px;
+  height: 100vh;
 }
 
 #navBarFixed {
@@ -41,14 +96,15 @@
   color: rgb(140, 100, 80);
 }
 
-.bloc-anim {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 25rem;
-  height: 25rem;
-  z-index: 100;
+.parallax__portfolio {
+  background: grey;
+  background-image: url(/ressources/amr-taha-6VjuO4aw19c-unsplash.jpg);
+  height: 600px;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
 }
 
 .smart__hide {
@@ -74,34 +130,34 @@
 
 @-webkit-keyframes anim-glow {
   0% {
-    box-shadow: 0 15px 20px rgba(100, 180, 255, 0.7);
+    box-shadow: 0 15px 20px rgba(154, 72, 21, 0.7);
   }
   50% {
-    box-shadow: 0 15px 40px rgba(125, 255, 255, 0.9);
+    box-shadow: 0 15px 40px rgba(154, 72, 21, 0.7);
   }
   100% {
-    box-shadow: 0 15px 20px rgba(100, 180, 255, 0.7);
+    box-shadow: 0 15px 20px rgba(154, 72, 21, 0.7);
   }
 }
 
 @keyframes anim-glow {
   0% {
-    box-shadow: 0 15px 20px rgba(100, 180, 255, 0.7);
+    box-shadow: 0 15px 20px rgba(154, 72, 21, 0.7);
   }
   50% {
-    box-shadow: 0 15px 40px rgba(125, 255, 255, 0.9);
+    box-shadow: 0 15px 40px rgba(154, 72, 21, 0.7);
   }
   100% {
-    box-shadow: 0 15px 20px rgba(100, 180, 255, 0.7);
+    box-shadow: 0 15px 20px rgba(154, 72, 21, 0.7);
   }
 }
 .smartphone {
   width: 450px;
   height: 600px;
   max-height: calc(100% - 60px);
-  border: 8px solid #06a;
-  box-shadow: 0 15px 50px rgba(100, 180, 255, 0.7);
-  background-color: #06a;
+  border: 8px solid rgba(88, 75, 67, 0.7);
+  box-shadow: 0 15px 50px rgba(194, 51, 15, 0.763);
+  background-color: rgba(136, 91, 64, 0.968);
   border-radius: 30px;
   position: relative;
 }
@@ -132,9 +188,9 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 4px solid #06a;
+  border: 4px solid rgba(88, 75, 67, 0.7);
   position: absolute;
-  background-color: rgba(125, 125, 125, 0.25);
+  background-color: rgba(22, 22, 22, 0.25);
   -webkit-animation: anim-glow 2s infinite;
           animation: anim-glow 2s infinite;
 }
@@ -152,7 +208,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 4px solid #06a;
+  border: 4px solid rgba(88, 75, 67, 0.7);
   position: absolute;
   transition: border 0.3s ease-in-out;
   background-color: rgba(125, 125, 125, 0.5);
@@ -172,8 +228,10 @@
   width: 45%;
   height: 400px;
   margin-bottom: 20px;
+  transition: 0.1s ease-in-out;
 }
 #cards .card-wrapper .card {
+  border: none;
   height: 100%;
 }
 #cards .card-wrapper .card img {
@@ -181,94 +239,77 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+#cards .card-wrapper:hover {
+  transform: scale(1.1);
+}
 
-/* contenu de limage qui part du bas et est animé en JS vers le haut */
-.contain-image {
-  position: absolute;
+.card__imagePortfolio {
+  position: relative;
   width: 100%;
-  height: 0%;
-  bottom: 0px;
-  z-index: 150;
+  height: 42.4%;
   overflow: hidden;
+  border-radius: 0.2rem;
 }
 
-.img-flip {
-  width: 100%;
-  height: 100%;
+.card__imagePortfolio::after {
+  content: "";
   position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: radial-gradient(circle at center left, rgb(140, 100, 80), rgb(60, 40, 20));
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 50%;
+  transition: 1s ease-in-out;
 }
 
-.flip-img1 {
-  background: url(../ressources/manInBlackRed.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.flip {
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
+.card__imagePortfolio::before {
+  content: "";
   position: absolute;
+  background: radial-gradient(circle at center right, rgb(140, 100, 80), rgb(60, 40, 20));
+  bottom: 0;
+  top: 0;
+  right: 50%;
+  left: 0;
+  transition: 1s ease-in-out;
 }
 
-.background-transition {
-  background: rgb(19, 19, 19);
+.card-wrapper:hover .card__imagePortfolio::after {
+  opacity: 0;
+  transform: translateX(100%);
 }
 
-.bloc-txt {
-  position: absolute;
-  bottom: -50px;
-  left: -50px;
-  height: 0;
-  z-index: 175;
-  background: whitesmoke;
-  overflow: hidden;
-}
-
-.bloc-txt h2 {
-  padding: 1rem 2rem;
-  color: #222;
-  font-family: Playfair Display, serif;
-  font-size: 40px;
-  transform: translateY(100px);
+.card-wrapper:hover .card__imagePortfolio::before {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 /* Animation résponsive */
 @media screen and (max-width: 768px) {
-  .bloc-anim {
+  .bloc__anim {
     width: 15rem;
   }
 
-  .bloc-txt {
+  .bloc__txt {
     bottom: -35px;
   }
 
-  .bloc-txt h2 {
+  .bloc__txt h2 {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 768px) {
-  .bloc-anim {
+  .bloc__anim {
     width: 20rem;
   }
 
-  .bloc-txt {
+  .bloc__txt {
     bottom: -35px;
   }
 
-  .bloc-txt h2 {
+  .bloc__txt h2 {
     font-size: 25px;
   }
 }
-body {
-  font-family: fantasy;
-  min-width: 320px;
-}
-
 #accueil {
   margin: 0 auto;
   background: radial-gradient(circle at center center, rgb(140, 100, 80), rgb(60, 40, 20));
@@ -284,16 +325,211 @@ body {
   background-image: radial-gradient(circle at center center, rgb(140, 100, 80), rgb(60, 40, 20));
 }
 
-#services.image_services img {
-  border: solid red;
-}
-
 .section-contact {
   background-image: radial-gradient(circle at center center, rgb(140, 100, 80), rgb(60, 40, 20));
 }
 
-.test {
-  border: rgb(60, 40, 20) solid;
-  width: 50px;
-  height: 50px;
+.rainbow {
+  z-index: 1;
+  background: white;
+  transition: 0.1s ease-in-out;
+}
+.rainbow.rainbow:hover {
+  transform: scale(1.1);
+}
+
+.card__stack {
+  position: relative;
+  transition: 0.1s ease-in-out;
+  transition: 1s scale ease-in-out;
+  background-color: white;
+  border-radius: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.card__stack:hover::before, .card__stack:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center left, rgb(140, 100, 80), rgb(60, 40, 20));
+  border-radius: 10px;
+  z-index: -1;
+  -webkit-animation: 1s danslesens infinite;
+          animation: 1s danslesens infinite;
+}
+
+.card__stack:hover::after {
+  background: radial-gradient(circle at center left, rgb(90, 70, 50), rgb(145, 119, 106));
+  -webkit-animation: 2s inverse infinite;
+          animation: 2s inverse infinite;
+}
+
+@-webkit-keyframes danslesens {
+  0% {
+    top: -5px;
+    left: 0px;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0px;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0px;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0px;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0px;
+  }
+}
+
+@keyframes danslesens {
+  0% {
+    top: -5px;
+    left: 0px;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0px;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0px;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0px;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0px;
+  }
+}
+@-webkit-keyframes inverse {
+  0% {
+    top: -5px;
+    left: 0px;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0px;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0px;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0px;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0px;
+  }
+}
+@keyframes inverse {
+  0% {
+    top: -5px;
+    left: 0px;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0px;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0px;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0px;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0px;
+  }
+}
+.parallax__stack {
+  background: grey;
+  /*the image used*/
+  background-image: url(/ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
+  /* set a specific height  */
+  height: 700px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */

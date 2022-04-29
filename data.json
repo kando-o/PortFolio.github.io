@@ -1,19 +1,20 @@
 {
     "projets": [
-        {},
+        
         {
-            "id":"1",
+            "id":"0",
             "name" : "ohMyFood",
             "title" : "Projet Oh My Food",
             "image" : "ohMyFood2.PNG",
             "alt" : "petite image du Site",
             "codeSource" : "https://github.com/kando-o/JasonKando_3_0802_2021.github.io.git",
             "description" : "Site vitrine realisé entièrement en HTML, SCSS 'SAAS'. Site de réservation de restaurant.",
-            "viewProjet" : "https://kando-o.github.io/Projet-OhMyFood.github.io/"        
+            "viewProjet" : "https://kando-o.github.io/Projet-OhMyFood.github.io/"  ,
+            "viewProjetSmartPhone": "https://kando-o.github.io/Projet-OhMyFood.github.io/"      
         }
         ,
         {
-            "id":"2",
+            "id":"1",
             "name" : "fishEye",
             "title" : "Projet FishEye",
             "image" : "fisheye.PNG",
@@ -23,7 +24,7 @@
         }
         ,
         {
-            "id":"3",
+            "id":"2",
             "name" : "GTLM-Production",
             "title" : "Gtlm & Co",
             "image" : "ManWhitHat.jpg",
@@ -33,13 +34,13 @@
         }
         ,
         {
-            "id":"4",
+            "id":"3",
             "name" : "Animation",
             "title" : "Site Vitrine",
             "image" : "animation.jpg",
-            "codeSource" : "#",
+            "codeSource" : "https://github.com/kando-o/Projet-Site_Vitrine_Respirez.github.io",
             "description" : "Slim Shady",
-            "viewProjet" : "#"        
+            "viewProjet" : "https://www.ecole-du-web.net/courses/enrolled/656539"        
         }
     ],
 
@@ -108,7 +109,5 @@
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de Vue JS"
         }
-        
-        
     ]
 }
