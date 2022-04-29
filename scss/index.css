@@ -98,7 +98,7 @@ body {
 
 .parallax__portfolio {
   background: grey;
-  background-image: url(/ressources/amr-taha-6VjuO4aw19c-unsplash.jpg);
+  background-image: url(../ressources/amr-taha-6VjuO4aw19c-unsplash.jpg);
   height: 600px;
   background-attachment: fixed;
   background-position: top;
@@ -522,7 +522,7 @@ body {
 .parallax__stack {
   background: grey;
   /*the image used*/
-  background-image: url(/ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
+  background-image: url(../ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
   /* set a specific height  */
   height: 700px;
   /* Create the parallax scrolling effect */
