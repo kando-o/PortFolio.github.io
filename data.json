@@ -87,17 +87,25 @@
         }
         ,
         {
-            "name":"NodeJS",
+            "name":"GreenSock",
             "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-            "image":"Node.js_logo.svg",
+            "image":"greenSock2.png",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de NodeJs"
         }
         ,
         {
-            "name":"Vue JS",
+            "name":"ScrollMagic",
             "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
-            "image":"vue.png",
+            "image":"scrollMagic.png",
+            "vieuwStack":"lien vers un projet",
+            "alt": "Grande icone de Vue JS"
+        }
+        ,
+        {
+            "name":"Vue JS",
+            "description":"Framwork JS facilite grandement la conception de site OnePagepage ",
+            "image":"Vue.js_Logo_2.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de Vue JS"
         }

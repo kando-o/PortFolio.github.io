@@ -1,14 +1,3 @@
-// upload mettre du local sur un server
-// load télécharger du local vers
-// download get from server / récuperation depuis un serveur
-// create cration d'el
-// init cration des paramètres par défaut.
-// render du virtuel à --> l'affichage
-// Voir animation portfolio
-// Skal sur les cards stacks
-// animation en biais sur les images des cards 
-// VOIR PARALLAX 
-
 /**
  * @description | Animation du loader
  */
@@ -54,10 +43,10 @@ function loader(card) {
     })
 
     // Animation card partie PortFolio
-    gsap.to(cardPortFolio[0], { x: -25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
-    gsap.to(cardPortFolio[1], { x: 25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
-    gsap.to(cardPortFolio[2], { x: -25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
-    gsap.to(cardPortFolio[3], { x: 25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+        // gsap.to(test225[0], { x: -25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+        // gsap.to(test[1], { x: 25, delay : 8, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} ),
+        // gsap.to(cardPortFolio[2], { x: -25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
+        // gsap.to(cardPortFolio[3], { x: 25, delay : 9.5, duration: 1.8, ease : 'bounce', yoyo:true, repeat : 1} )
 
 }
 // Display card PortFlolio
@@ -75,9 +64,9 @@ function loadCard(card) {
     
     if(!card.id)return'';
     return `
-    <div class="col-lg-4 col-md-6 col-12 card-wrapper">
+    <div class="col-lg-4 col-md-6 col-12 card-wrapper translateDroite translateGauche">
 
-        <div class="card card__portfolio mb-4 shadow" id="${card.name}">
+        <div class="card  card__portfolio mb-4 shadow" id="${card.name}">
 
             <span class="card__imagePortfolio">
             <img src="./ressources/${card.image}" alt="${card.alt}" class="card-img-top " style="height: 10.5rem">
@@ -117,6 +106,8 @@ function render(card) {
     loadCardStacks(card.stacks)
     displaySmartPhone(card.projets);
     renderCardStacks(card.stacks)
+    initscrollMagic()
+
 }
 
 function loadCardStacks(cards) {
@@ -140,7 +131,54 @@ function loadCardStacks(cards) {
     })
 }
 
+// Parallax scollMaggic and GreenSock
+
+
+function initscrollMagic() {
+
+    let cardPortFolio = document.querySelectorAll('.card__portfolio');
+    let test225 = cardPortFolio
+
+    $(document).ready(function(){
+        
+        let controller = new ScrollMagic.Controller();
+                
+        new ScrollMagic.Scene({
+            triggerElemen: '.translateDroite',
+            offset: 200,
+            duration:'125%'
+        })
+        .setClassToggle('.card-wrapper', 'fade-in-translateX')
+        // .addIndicators({
+        //     name: 'debut card_wrapper',
+        //     indent: 500,
+        //     colorStart: 'blue',
+        //     colorEnd: 'red',
+        //     colorTrigger: 'black'
+        // }) 
+        .addTo(controller)
+
+       let stactMagic = new ScrollMagic.Scene({
+            triggerElemen: '.parallaxStack__bcg',
+            triggerHook : .5,
+            duration:"95%",
+            offset: 3400
+        })
+        .setClassToggle('.parallaxStack__content', 'fade-in-in-opacity')
+
+        .addIndicators({
+        name:'débutStackSroll',
+        indent: 400,
+        colorStart: 'green',
+        colorEnd: 'red',
+        colorTrigger: 'black'
+        })
+        .addTo(controller)
+    })
+}
+
 // Displaycard Stacks
+
 function launchSmartPhone(src){
     console.log('test');
     let srcIframe = document.getElementById('srcIframe');

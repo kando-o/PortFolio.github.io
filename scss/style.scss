@@ -56,6 +56,7 @@ $border : 3px solid whitesmoke;
                     background:  rgb(19, 19, 19);
                 }                
             }
+
             & .bloc__txt{
                 position: absolute;
                 bottom: -50px;
@@ -64,7 +65,6 @@ $border : 3px solid whitesmoke;
                 z-index: 175;
                 background: whitesmoke;
                 overflow: hidden;
-
                 &.bloc__txt h2 {
                     padding: 1rem 2rem;
                     color: #222;
@@ -98,20 +98,39 @@ body{
             transform:scale(1.3);
         }
         &:hover::first-letter{
-            color: rgb(140, 100, 80);
+            color: rgb(234, 26, 26);
         }
     }
 }
     // Parallax
 .parallax__portfolio{
+    padding: 15rem 0;
+    color: white;
     background: grey;
-    background-image: url(../ressources/amr-taha-6VjuO4aw19c-unsplash.jpg);
-    height: 600px;
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .8;
+    position: relative;
+    overflow: hidden;
+    & .parallax__bcg{
+        position: absolute;
+        background: grey;
+        background-image: url(../ressources/amr-taha-6VjuO4aw19c-unsplash.jpg);
+        height: 110%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: top;
+        background-size: cover;
+        opacity: .8;
+        & .parallax__content{
+            position: relative;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 5rem;
+            margin-top: 11%;
+        }
+    }
 }
     // Smartphone
 .smart__hide{
@@ -145,7 +164,6 @@ body{
         box-shadow : 0 15px 20px rgba(154, 72, 21, 0.7);
     }
 }
-
 .smartphone {
     width : 450px;
     height : 600px;
@@ -155,62 +173,61 @@ body{
     background-color: rgba(136, 91, 64, 0.968);;
     border-radius : 30px;
     position : relative;
-    &__frame{
-        height : calc(100% - 40px);
-        background-color:#ccc;
-        margin : 20px 0;
-        border-radius : 4px;
-    }
-    &__close{
-        border: none;
-        font-family: Arial, sans-serif;
-        padding: 1rem;
-        right: 0;
-        position: absolute;
-        background-color: transparent;
-        outline: none;
-        cursor: pointer;
-    }
-
-    &::before{
-        content:'-';
-        display:flex;
-        align-items:center;
-        align-content:center;
-        justify-content:space-around;
-        top : 45%;
-        left : -95px;
-        width : 80px;
-        height : 80px;
-        border-radius:50%;
-        border: 4px solid rgba(88, 75, 67, 0.7);;
-        position : absolute;
-        background-color: rgba(22, 22, 22, 0.25);
-        animation : anim-glow 2s infinite;
-        &:hover{
-            border : 8px solid $smartphone_background;
+        &__frame{
+            height : calc(100% - 40px);
+            background-color:#ccc;
+            margin : 20px 0;
+            border-radius : 4px;
         }
-    }
-    &::after{
-        content:'+';
-        display:flex;
-        align-items:center;
-        align-content:center;
-        justify-content:space-around;
-        top : 45%;
-        left : 450px;
-        width : 80px;
-        height : 80px;
-        border-radius:50%;
-        border: 4px solid rgba(88, 75, 67, 0.7);;
-        position : absolute;
-        transition : border 0.3s ease-in-out;
-        background-color: rgba(125,125,125,0.5);
-        animation : anim-glow 2s infinite;
-        &:hover{
-            border : 8px solid $smartphone_background;
+        &__close{
+            border: none;
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+            right: 0;
+            position: absolute;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
         }
-    }
+        &::before{
+            content:'-';
+            display:flex;
+            align-items:center;
+            align-content:center;
+            justify-content:space-around;
+            top : 45%;
+            left : -95px;
+            width : 80px;
+            height : 80px;
+            border-radius:50%;
+            border: 4px solid rgba(88, 75, 67, 0.7);;
+            position : absolute;
+            background-color: rgba(22, 22, 22, 0.25);
+            animation : anim-glow 2s infinite;
+            &:hover{
+                border : 8px solid $smartphone_background;
+            }
+        }
+        &::after{
+            content:'+';
+            display:flex;
+            align-items:center;
+            align-content:center;
+            justify-content:space-around;
+            top : 45%;
+            left : 450px;
+            width : 80px;
+            height : 80px;
+            border-radius:50%;
+            border: 4px solid rgba(88, 75, 67, 0.7);;
+            position : absolute;
+            transition : border 0.3s ease-in-out;
+            background-color: rgba(125,125,125,0.5);
+            animation : anim-glow 2s infinite;
+            &:hover{
+                border : 8px solid $smartphone_background;
+            }
+        }
 }
     // Card Portfolio
 #cards {
@@ -230,10 +247,34 @@ body{
                 object-fit: cover;
             }
         }
+        & .card__portfolio{
+            transition:  1s ease-in-out;    
+        }
     }
-    & .card-wrapper:hover{
-        transform: scale(1.1);
+    & .card__portfolio:hover{
+        transform: scale(1.1)!important;
+    }    
+}
+.translateDroite,
+.translateGauche {
+    opacity: 0;
+    transition: 1.5s ease-in-out!important;
+    &.translateDroite:nth-child(even) {
+        // border: solid 2px black;
+        transform: translateX(300px)
     }
+    &.translateGauche:nth-child(odd) {
+        // border: #06a 2px solid;
+        transform: translateX(-300px);
+    }
+}
+.fade-in-translateX{
+    opacity: 1;
+    transform: translateX(0)!important;
+}
+.fade-in-in-opacity{
+    opacity: 1!important;
+    transform: translateX(0)!important;
 }
 .card__imagePortfolio{
     position: relative;
@@ -241,17 +282,18 @@ body{
     height: 42.4%;
     overflow: hidden;
     border-radius: .2rem;
+    transition:  2s ease-in-out;
 }
 .card__imagePortfolio::after{
     content: '';
     position: absolute;
     background: radial-gradient(circle at center left, rgb(140, 100, 80), rgb(60, 40, 20));
-    ;
     bottom: 0;
     top: 0;
     right: 0;
-    left: 50%;
-    transition:  .4s ease-in-out;
+    z-index: 5;
+    left: 49.5%;
+    transition:  2s ease-in-out;
 }
 .card__imagePortfolio::before{
     content: '';
@@ -259,20 +301,23 @@ body{
     background: radial-gradient(circle at center right, rgb(140, 100, 80), rgb(60, 40, 20));
     bottom: 0;
     top: 0;
-    right: 50%;
+    right: 49.5%;
     left: 0;
-    transition:  .4s ease-in-out;
-
+    transition: 2s ease-in-out;
 }
-.card-wrapper:hover .card__imagePortfolio::after
+.card-wrapper:hover
+.card__imagePortfolio::after
 {
     opacity: 0;
-    transform: translateX(100%);
+    transform: rotate3d( 0,-1,0,1080deg);
 }
-.card-wrapper:hover .card__imagePortfolio::before
+.card-wrapper:hover 
+.card__imagePortfolio::before
 {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: scale(1.1);
+    transform: rotate3d( 0,1,0,1080deg);
+    transform-origin: center;
 }
 
 /* Animation résponsive */
@@ -322,13 +367,11 @@ body{
 
 .rainbow{
     z-index: 1;
-    // overflow: hidden;
     background: white;
-    transition: .2s ease-in-out;
+    transition: .5s ease-in-out;
         &.rainbow:hover{
             transform: scale(1.1);
         }
-    
 }
 .card__stack{
     position: relative;
@@ -338,6 +381,7 @@ body{
     border-radius: 1rem;
     // box-shadow: 0 0 1px 0 rgba(0,0,0,0.25);
     transition: .2s ease-in-out;
+    padding: 2rem;
 }
 
 .card__stack:hover::before, .card__stack:hover::after {
@@ -440,14 +484,29 @@ body{
 .parallax__stack {
     background: grey;
     /*the image used*/
-    background-image: url(../ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
-    /* set a specific height  */
-    height: 700px;
-     /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .8;
     font-weight: 600;    
+    .parallaxStack__bcg{
+        background-image: url(../ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
+        /* set a specific height  */
+        opacity: .8;
+        padding: 19rem;
+         /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .parallaxStack__content{
+        z-index: 1;
+        color: whitesmoke;
+        text-align: center;
+        font-size: 5rem;
+        transform: translateY(-300px);
+        opacity: 0;
+        transition: 1.5s ease-in-out;
+    }
+    & span{
+        color : rgb(140, 100, 80);
+
+    }
 }

@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/index.css">
+    <link rel="stylesheet" href="/scss/style.css">
     <link rel="shortcut icon" href="./ressources/logoGtlm.png" > 
 
+<!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
     <title>Portfolio</title>
+
 </head>
 
 <body>
 
     <!-- Loader -->
+
     <div class="loader__container">
 
         <div class="bloc__anim bg-loader ">
@@ -62,7 +73,6 @@
         </div>
     </nav> 
 
-
     <!-- Accueil -->
 
     <div class="text-white bg-dark text-center d-flex flex-column align-items-center w-100 h-75 p-3 mx-auto" id="accueil">
@@ -87,7 +97,6 @@
     <!-- container automatiquement responsive -->
     <!-- row permet de faire 1 ranger de 12 colonnes -->
     <section>
-
         <div class="py-5" id="portfolio">
             <h2 class="text-center mb-5 text-uppercase">Portfolio</h2>
             
@@ -95,11 +104,18 @@
 
                 <div class="row justify-content-center" id="cards"></div>
             </div>
-        </div>
-        <div class="parallax__portfolio"></div>
-
+        </div> 
     </section>
 
+    <!-- Parallax PortFolio -->
+    
+    <div class="parallax__portfolio">
+      <div class="parallax__bcg">
+          <div class="parallax__content">
+              <p>Nothing is Impossible</p>
+          </div>
+      </div>   
+    </div>
 
     <!-- À Propos  -->
         
@@ -137,21 +153,30 @@
     <!-- Ma Stack -->
 
     <section id="services">
+
         <h2 class="text-uppercase my-4 text-center">Ma Stack</h2>
-            <div class="container ">
+            <div class="container pb-5">
                 <div class="row d-flex  justify-content-center align-items-center"  id="container__stack">
                 </div>
             </div>
-
-            <div class="parallax__stack"></div>
-
     </section>
+
+    <!-- Parallax Stack -->
+
+        <div class="parallax__stack">
+
+            <div class="parallaxStack__bcg">
+                <div class="parallaxStack__content">
+                    <p><span>N</span>othing <span>i</span>s <span>I</span>mpossible</p>
+                </div> 
+            </div>
+        </div>
 
     <!-- Formilaire de contacte -->
 
     <section id="contact" class="bg-dark section-contact">
         <div class="container text-white d-flex flex-column">
-         <h2 class="titreContacte text-center">Rentrons en contact</h2> 
+         <h2 class="titreContacte py-4 text-center">Rentrons en contact</h2> 
 
             <!-- Section Formulaire -->
 
@@ -203,23 +228,26 @@
           @Tout Droits Réservés - Jason KANDO
         </p>
     </footer>
-
-
-
-  
-
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
             
-            <!-- Script GreenSock -->
+        <!-- GreenSock -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
 
+        <!-- scrollmagic -->
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+        <!-- JQuery -->
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        
         <script src="./app.js"></script>
+
     </body>
 </html>
