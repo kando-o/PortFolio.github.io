@@ -150,13 +150,13 @@ function initscrollMagic() {
             triggerHook : .2,
             duration:'125%'
         })
-        .addIndicators({
-            name: 'debut card',
-            indent: 300,
-            colorStart: 'green',
-            colorEnd: 'red',
-            colorTrigger: 'blue'
-        }) 
+        // .addIndicators({
+        //     name: 'debut card',
+        //     indent: 300,
+        //     colorStart: 'green',
+        //     colorEnd: 'red',
+        //     colorTrigger: 'blue'
+        // }) 
         .setClassToggle('.card-wrapper', 'fade-in-translateX')
         .addTo(controller)
 
@@ -168,13 +168,13 @@ function initscrollMagic() {
         })
         .setClassToggle('.parallaxStack__content', 'fade-in-in-opacity')
 
-        .addIndicators({
-        name:'débutStackSroll',
-        indent: 200,
-        colorStart: 'green',
-        colorEnd: 'red',
-        colorTrigger: 'blue'
-        })
+        // .addIndicators({
+        // name:'débutStackSroll',
+        // indent: 200,
+        // colorStart: 'green',
+        // colorEnd: 'red',
+        // colorTrigger: 'blue'
+        // })
         .addTo(controller)
     })
     // } else {
