@@ -229,6 +229,13 @@ body{
             }
         }
 }
+@media screen and (max-width:500px) {
+    #accueil{
+        height: 40rem!important
+    }
+
+}
+
     // Card Portfolio
 #cards {
     flex-wrap: wrap;
@@ -249,6 +256,9 @@ body{
         }
         & .card__portfolio{
             transition:  1s ease-in-out;    
+        }
+        & .btn__smartVieu{
+            display: none;
         }
     }
     & .card__portfolio:hover{
@@ -341,6 +351,19 @@ body{
     }
     .bloc__txt h2{
         font-size: 25px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .card-wrapper {
+        opacity: 1;
+        // border: brown solid;
+        .btn__smartVieu{
+            display: none;
+        }
+    }
+    .translateDroite, 
+    .translateGauche{
+        transform: translateX(0)!important;
     }
 }
 // Accueil
@@ -484,12 +507,14 @@ body{
 .parallax__stack {
     background: grey;
     /*the image used*/
+    overflow: hidden;
     font-weight: 600;    
     .parallaxStack__bcg{
         background-image: url(../ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
         /* set a specific height  */
         opacity: .8;
-        padding: 19rem;
+        // padding: 19rem;
+        height: 40rem;
          /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
@@ -497,16 +522,31 @@ body{
         background-size: cover;
     }
     .parallaxStack__content{
+        position: relative;
         z-index: 1;
         color: whitesmoke;
         text-align: center;
-        font-size: 5rem;
+        transition: 1s ease-in-out;
         transform: translateY(-300px);
         opacity: 0;
-        transition: 1.5s ease-in-out;
+        & .parallaxStack__txt {
+            width: 100%;
+            font-size: 5rem;
+            margin-top: 11%;
+            position: absolute;
+            left: 50%; /* à 50%/50% du parent référent */
+            transform: translate(-50%)
+
+        }
     }
     & span{
         color : rgb(140, 100, 80);
 
+    }
+}
+@media screen and ( max-width:760px) {
+    .parallax__content{
+        font-size: 3.5rem!important;
+        margin-top: 35%!important;
     }
 }

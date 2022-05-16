@@ -92,7 +92,7 @@ function loadCard(card) {
                         </button>
                     </a>
                     
-                    <button class="btn btn-sm btn-outline btn-secondary ml-2" onclick="launchSmartPhone('${card.viewProjet}')" id="${card.id}">
+                    <button class="btn btn-sm btn-outline btn-secondary btn__smartVieu ml-2" onclick="launchSmartPhone('${card.viewProjet}')" id="${card.id}">
                         Vieuw Projet SmartPhone
                     </button>            
                 </div>
@@ -132,49 +132,55 @@ function loadCardStacks(cards) {
 }
 
 // Parallax scollMaggic and GreenSock
+let body = document.querySelector('body')
 
+// console.log(body.offsetWidth);
 
 function initscrollMagic() {
-
-    let cardPortFolio = document.querySelectorAll('.card__portfolio');
-    let test225 = cardPortFolio
+    // if (body.offsetWidth > 990) {
+    console.log("sup 1200px");
 
     $(document).ready(function(){
         
         let controller = new ScrollMagic.Controller();
                 
-        new ScrollMagic.Scene({
-            triggerElemen: '.translateDroite',
-            offset: 200,
+        let scenePortfolio = new ScrollMagic.Scene({
+            triggerElement: '.titreport',
+            reverse : true,
+            triggerHook : .2,
             duration:'125%'
         })
+        .addIndicators({
+            name: 'debut card',
+            indent: 300,
+            colorStart: 'green',
+            colorEnd: 'red',
+            colorTrigger: 'blue'
+        }) 
         .setClassToggle('.card-wrapper', 'fade-in-translateX')
-        // .addIndicators({
-        //     name: 'debut card_wrapper',
-        //     indent: 500,
-        //     colorStart: 'blue',
-        //     colorEnd: 'red',
-        //     colorTrigger: 'black'
-        // }) 
         .addTo(controller)
 
-       let stactMagic = new ScrollMagic.Scene({
-            triggerElemen: '.parallaxStack__bcg',
+       let sceneParallax = new ScrollMagic.Scene({
+            triggerElement: '.parallax__stack',
             triggerHook : .5,
-            duration:"95%",
-            offset: 3400
+            duration:"50%",
+            // offset: 3400
         })
         .setClassToggle('.parallaxStack__content', 'fade-in-in-opacity')
 
         .addIndicators({
         name:'débutStackSroll',
-        indent: 400,
+        indent: 200,
         colorStart: 'green',
         colorEnd: 'red',
-        colorTrigger: 'black'
+        colorTrigger: 'blue'
         })
         .addTo(controller)
     })
+    // } else {
+    //     console.log("scrollMagic portFolio non activer");
+    // }
+
 }
 
 // Displaycard Stacks

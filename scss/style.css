@@ -238,6 +238,11 @@ body {
   border: 8px solid #06a;
 }
 
+@media screen and (max-width: 500px) {
+  #accueil {
+    height: 40rem !important;
+  }
+}
 #cards {
   flex-wrap: wrap;
   max-width: 1200px;
@@ -260,6 +265,9 @@ body {
 }
 #cards .card-wrapper .card__portfolio {
   transition: 1s ease-in-out;
+}
+#cards .card-wrapper .btn__smartVieu {
+  display: none;
 }
 #cards .card__portfolio:hover {
   transform: scale(1.1) !important;
@@ -358,6 +366,19 @@ body {
 
   .bloc__txt h2 {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .card-wrapper {
+    opacity: 1;
+  }
+  .card-wrapper .btn__smartVieu {
+    display: none;
+  }
+
+  .translateDroite,
+.translateGauche {
+    transform: translateX(0) !important;
   }
 }
 #accueil {
@@ -573,13 +594,14 @@ body {
 .parallax__stack {
   background: grey;
   /*the image used*/
+  overflow: hidden;
   font-weight: 600;
 }
 .parallax__stack .parallaxStack__bcg {
   background-image: url(../ressources/amr-taha-SMMqej67qjI-unsplash.jpg);
   /* set a specific height  */
   opacity: 0.8;
-  padding: 19rem;
+  height: 40rem;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -587,14 +609,30 @@ body {
   background-size: cover;
 }
 .parallax__stack .parallaxStack__content {
+  position: relative;
   z-index: 1;
   color: whitesmoke;
   text-align: center;
-  font-size: 5rem;
+  transition: 1s ease-in-out;
   transform: translateY(-300px);
   opacity: 0;
-  transition: 1.5s ease-in-out;
+}
+.parallax__stack .parallaxStack__content .parallaxStack__txt {
+  width: 100%;
+  font-size: 5rem;
+  margin-top: 11%;
+  position: absolute;
+  left: 50%;
+  /* à 50%/50% du parent référent */
+  transform: translate(-50%);
 }
 .parallax__stack span {
   color: rgb(140, 100, 80);
+}
+
+@media screen and (max-width: 760px) {
+  .parallax__content {
+    font-size: 3.5rem !important;
+    margin-top: 35% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
