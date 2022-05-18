@@ -117,7 +117,7 @@ function loadCardStacks(cards) {
         document.getElementById('container__stack').innerHTML += `
         <span class="rainbow text-center d-flex m-4 flex-column justify-content-center align-items-center col-md-6 col-lg-3" >
 
-            <div class=" card__stack flex-column align-items-center justify-content-center text-center" style="height: 20rem;">
+            <div class=" card__stack flex-column align-items-center justify-content-center text-center" style="height: 22rem;">
                 <img src="./ressources/${card.image}" alt="" width="140" height="130">
                     <h2 class="text-uppercase text-center">${card.name}</h2>
                         <p>

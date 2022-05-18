@@ -48,7 +48,7 @@
 
         {
             "name":"VS Code",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"Visual Studio Code est un éditeur de code extensible développé par Microsoft pour Windows, Linux et macOS1.",
             "image":"Visual_Studio_Code_1.35_icon.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de VS Code"
@@ -56,7 +56,7 @@
         ,
         {
             "name":"SASS",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"Sass, est un préprocesseur qui va ajouter une surcouche de fonctionnalités au CSS.",
             "image":"Sass_Logo_Color.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de SAAS"
@@ -72,7 +72,7 @@
         ,
         {
             "name":"JS",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"JavaScript est un langage de programmation de scripts employé pour le web interactives.",
             "image":"js.jpg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de JS"
@@ -80,7 +80,7 @@
         ,
         {
             "name":"NPM",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"npm est le gestionnaire de paquets par défaut pour l'environnement d'exécution JavaScript Node.js.",
             "image":"Npm-logo.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de NPM"
@@ -88,7 +88,7 @@
         ,
         {
             "name":"GreenSock",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"GSAP/GreenSock est une bibliothèque d'animation pour HTML5, CSS3 et JS",
             "image":"greenSock2.png",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de NodeJs"
@@ -96,7 +96,7 @@
         ,
         {
             "name":"ScrollMagic",
-            "description":"Framwork qui accopagne le CSS et facilite grandement la création de site",
+            "description":"ScrollMagic est la librairie liés aux animation du Scroll.",
             "image":"scrollMagic.png",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de Vue JS"
@@ -104,7 +104,7 @@
         ,
         {
             "name":"Vue JS",
-            "description":"Framwork JS facilite grandement la conception de site OnePagepage ",
+            "description":"JavaScript open-source utilisé pour construire des interfaces utilisateur et des applications web monopages.",
             "image":"Vue.js_Logo_2.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de Vue JS"
@@ -112,7 +112,7 @@
         ,
         {
             "name":"React",
-            "description":"Framwork JS facilite grandement la conception de site OnePagepage ",
+            "description":"Framwork JS facilite grandement la conception de d'application web monopage. Développée par Facebook depuis 2013.",
             "image":"React-icon.svg",
             "vieuwStack":"lien vers un projet",
             "alt": "Grande icone de Vue JS"
